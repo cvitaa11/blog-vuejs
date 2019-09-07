@@ -1,12 +1,14 @@
 <template>
   <nav>
     <ul>
-      <li class="navbar-brand text-white">SUM</li>
-      <li>
-        <router-link to="/" exact>Home</router-link>
+      <li class="navbar-brand text-white">
+        <a href="/" class="text-white">SUM</a>
       </li>
       <li>
-        <router-link to="/add" exact>Add New</router-link>
+        <router-link to="/" exact>Naslovnica</router-link>
+      </li>
+      <li>
+        <router-link to="/about" exact>O nama</router-link>
       </li>
     </ul>
   </nav>
@@ -31,7 +33,7 @@ a {
   border-radius: 10px;
 }
 nav {
-  background: #444;
+  background: rgb(22, 2, 134);
   padding: 14px 0;
   margin-bottom: 40px;
 }

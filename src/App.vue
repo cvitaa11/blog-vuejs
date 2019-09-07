@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import addBlog from "./components/addBlog";
+import aboutBlog from "./components/aboutBlog";
 import showBlogs from "./components/showBlogs";
 import header from "./components/header";
 import footer from "./components/footer";
 
 export default {
   components: {
-    "add-blog": addBlog,
+    "about-blog": aboutBlog,
     "show-blogs": showBlogs,
     "app-header": header,
     "app-footer": footer

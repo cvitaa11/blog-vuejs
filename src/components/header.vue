@@ -1,8 +1,10 @@
 <template>
   <nav>
     <ul>
-      <li class="navbar-brand text-white">
-        <a href="/" class="text-white">SUM</a>
+      <li class="navbar-brand">
+        <a href="/">
+          <img src="@/assets/sumLogo.png" alt="logo" style="height: 50px; width: auto;" />
+        </a>
       </li>
       <li>
         <router-link to="/" exact>Naslovnica</router-link>
@@ -34,7 +36,7 @@ a {
 }
 nav {
   background: rgb(22, 2, 134);
-  padding: 14px 0;
+  padding: 10px 0;
   margin-bottom: 40px;
 }
 .router-link-active {

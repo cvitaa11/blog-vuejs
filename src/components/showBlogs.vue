@@ -52,12 +52,7 @@ export default {
   methods: {},
   created() {
     this.$http
-      .get("https://is.sum.ba:4443/ISSApi/resources/fakulteti/5/studiji", {
-        headers: {
-          issApiAccessToken:
-            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUE1PWl9JU1NBUEkiLCJyb2xlIjoiQVBJIiwiaXNzIjoiaXNzQXBpIiwiZXhwIjoxNTY3ODUwMzk5LCJpYXQiOjE1Njc3NzQ1OTZ9.33B7bBTytW21WNBA_jNr3TW-ptPogMJ1u1RpmVvPjNs"
-        }
-      })
+      .get("https://is.sum.ba:4443/ISSApi/resources/fakulteti/5/studiji")
       .then(function(data) {
         this.blogs = data.body;
       });

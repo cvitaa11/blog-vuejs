@@ -48,14 +48,7 @@ export default {
   created() {
     this.$http
       .get(
-        "https://is.sum.ba:4443/ISSApi/resources/fakulteti/5/studiji/" +
-          this.id,
-        {
-          headers: {
-            issApiAccessToken:
-              "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUE1PWl9JU1NBUEkiLCJyb2xlIjoiQVBJIiwiaXNzIjoiaXNzQXBpIiwiZXhwIjoxNTY3ODUwMzk5LCJpYXQiOjE1Njc3NzQ1OTZ9.33B7bBTytW21WNBA_jNr3TW-ptPogMJ1u1RpmVvPjNs"
-          }
-        }
+        "https://is.sum.ba:4443/ISSApi/resources/fakulteti/5/studiji/" + this.id
       )
       .then(function(data) {
         this.blog = data.body;

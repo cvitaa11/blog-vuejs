@@ -45,11 +45,7 @@
         <div class="col-sm-4">
           <div class="col-lg-10">
             <a href="https://www.sum.ba/" target="_blank">
-              <img
-                src="https://fpmoz.sum.ba/templates/fpmoz/img/sum_logo_en.png"
-                class="img-fluid"
-                alt="logo"
-              />
+              <img src="@/assets/sumLogo.png" class="img-fluid" alt="logo" />
             </a>
           </div>
         </div>
@@ -65,5 +61,8 @@ export default {};
 footer {
   background-color: rgb(22, 2, 134);
   height: 100%;
+}
+ul {
+  list-style-type: circle;
 }
 </style>

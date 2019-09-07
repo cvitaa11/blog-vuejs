@@ -38,13 +38,7 @@ export default {
       .get(
         "https://is.sum.ba:4443/ISSApi/resources/fakulteti/5/studiji/" +
           this.id +
-          "/nastavnici",
-        {
-          headers: {
-            issApiAccessToken:
-              "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUE1PWl9JU1NBUEkiLCJyb2xlIjoiQVBJIiwiaXNzIjoiaXNzQXBpIiwiZXhwIjoxNTY3ODUwMzk5LCJpYXQiOjE1Njc3NzQ1OTZ9.33B7bBTytW21WNBA_jNr3TW-ptPogMJ1u1RpmVvPjNs"
-          }
-        }
+          "/nastavnici"
       )
       .then(function(data) {
         this.blogDetail = data.body;

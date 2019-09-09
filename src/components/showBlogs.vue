@@ -41,6 +41,7 @@
 </template>
 
 <script>
+//READ THIS ARTICLE FOR PAGINATION https://medium.com/@denny.headrick/pagination-in-vue-js-4bfce47e573b
 export default {
   data() {
     return {

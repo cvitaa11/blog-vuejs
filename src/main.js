@@ -8,7 +8,7 @@ Vue.use(VueResource);
 Vue.use(VueRouter);
 
 Vue.http.headers.common["issApiAccessToken"] =
-  "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUE1PWl9JU1NBUEkiLCJyb2xlIjoiQVBJIiwiaXNzIjoiaXNzQXBpIiwiZXhwIjoxNTY3OTM2Nzk5LCJpYXQiOjE1Njc4NTI0NjJ9.Sy5G7hzlFhqXFSppd_BJ8h1skfojvTkWg9A3NOVDjeU";
+  "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGUE1PWl9JU1NBUEkiLCJyb2xlIjoiQVBJIiwiaXNzIjoiaXNzQXBpIiwiZXhwIjoxNTY4MTA5NTk5LCJpYXQiOjE1NjgwNTUyMTF9.7a4BNuF_gcAe7MTk7LX1WR0TQAtZkexhX7pi5lZduyk";
 
 const router = new VueRouter({
   routes: Routes,

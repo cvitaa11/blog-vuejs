@@ -37,20 +37,27 @@
         </div>
       </div>
     </div>
+    <!-- PAGINATION BUTTONS -->
+    <button @click="prevPage" :disabled="pageNumber==0">
+      Previous
+    </button>
+    <button @click="nextPage" :disabled="pageNumber >= pageCount() -1">
+      Next
+    </button>
+    <!-- END OF PAGINATION BUTTONS -->
   </div>
 </template>
 
 <script>
-//READ THIS ARTICLE FOR PAGINATION https://medium.com/@denny.headrick/pagination-in-vue-js-4bfce47e573b
 export default {
   data() {
     return {
       blogs: [],
-      search: ""
+      search: "",
+      pageNumber: 0, // INITIAL PAGE NUMBER
+      size: 10 // HOW MUCH ITEMS WILL BE DISPLAYED
     };
   },
-
-  methods: {},
   created() {
     this.$http
       .get("https://is.sum.ba:4443/ISSApi/resources/fakulteti/5/studiji")
@@ -60,14 +67,32 @@ export default {
   },
   computed: {
     filteredBlogs: function() {
+      const start = this.pageNumber * this.size,
+              end = start + this.size;
+
       return this.blogs.filter(blog => {
         return blog.naziv.match(this.search);
-      });
+      }).splice(start,end);
+
     }
   },
   filters: {
     snippet(value) {
       return value.slice(0, 300) + "...";
+    }
+  },
+  methods: {
+    //USE IT FOR DISPLAYED PROP ON NEXT BUTTON
+    pageCount(){
+      let l = this.blogs.length,
+              s = this.size;
+      return Math.ceil(l/s);
+    },
+    nextPage(){
+      this.pageNumber++;
+    },
+    prevPage(){
+      this.pageNumber--;
     }
   }
 };
